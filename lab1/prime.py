@@ -6,13 +6,15 @@ if start > end:
 
 
 def is_prime(n, end):
+    if end < 2:
+        return False
+
     if n == end:
         return True
 
     if end % n == 0:
         return False
-    else:
-        return is_prime(n + 1, end)
+    return is_prime(n + 1, end)
 
 
 def rec_is_prime(i, end):
