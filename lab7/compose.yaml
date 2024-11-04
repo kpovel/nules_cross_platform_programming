@@ -1,0 +1,20 @@
+services:
+  # todo-app:
+  #   build:
+  #     context: ./app
+  #   depends_on:
+  #     - todo-database
+  #   environment:
+  #     NODE_ENV: production
+  #   ports:
+  #     - 42069:42069
+
+  postgres:
+    image: postgres:latest
+    #volumes:
+    #  - database:/data/db
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+    ports:
+      - '5433:5432'
